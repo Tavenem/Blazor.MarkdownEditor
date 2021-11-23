@@ -28,11 +28,11 @@ jobs:
 
       - name: npm ci
         run: npm ci
-        working-directory: ./src/asets
+        working-directory: ./src/assets
 
       - name: npm build
         run: npm run build --if-present
-        working-directory: ./src/asets
+        working-directory: ./src/assets
 
       - name: Build
         run: dotnet build --configuration Release -p:Version=${{ env.VERSION }} --no-restore --nologo
