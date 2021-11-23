@@ -1,0 +1,31 @@
+﻿@page "/"
+
+<PageTitle>Tavenem MarkdownEditor Example</PageTitle>
+
+<h1>Tavenem MarkdownEditor</h1>
+
+<input @bind-value="Status" type="text" readonly style="margin-bottom:1rem;" />
+
+<MarkdownEditor @bind-Value="EditorMarkdown"
+                AfterChange="OnChange"
+                Placeholder="Enter text here..."
+                CustomToolbarButtons="CustomButtons" />
+
+<h1>MarkdownViewer</h1>
+
+<MarkdownViewer Value="@EditorMarkdown" />
+
+<h1>Tab preview</h1>
+<p>Light mode</p>
+
+<MarkdownEditor PreviewStyle="MarkdownPreviewStyle.Tabs"
+                Placeholder="Enter text here..."
+                Theme="MarkdownEditorTheme.Light" />
+
+<h1>Locked WYSIWYG</h1>
+<p>Dark mode</p>
+
+<MarkdownEditor EditMode="EditMode.WYSIWYG"
+                LockEditMode="true"
+                Placeholder="Enter text here..."
+                Theme="MarkdownEditorTheme.Dark" />

@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.31911.260
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavenem.Blazor.MarkdownEditor", "Tavenem.Blazor.MarkdownEditor.csproj", "{16B5F8DD-1903-4591-A88B-ED7BAB60FAC1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavenem.Blazor.MarkdownEditor.Sample", "..\sample\Tavenem.Blazor.MarkdownEditor.Sample.csproj", "{A6ADFD9A-62EF-417C-8D61-014CFB3A33D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{48B6EAD7-6A2B-4146-AE74-FD5664308292}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		..\.github\workflows\build.yml = ..\.github\workflows\build.yml
+		..\docs\CHANGELOG.md = ..\docs\CHANGELOG.md
+		..\docs\CODE_OF_CONDUCT.md = ..\docs\CODE_OF_CONDUCT.md
+		..\docs\CONTRIBUTING.md = ..\docs\CONTRIBUTING.md
+		..\.github\workflows\publish.yml = ..\.github\workflows\publish.yml
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16B5F8DD-1903-4591-A88B-ED7BAB60FAC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16B5F8DD-1903-4591-A88B-ED7BAB60FAC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16B5F8DD-1903-4591-A88B-ED7BAB60FAC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16B5F8DD-1903-4591-A88B-ED7BAB60FAC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6ADFD9A-62EF-417C-8D61-014CFB3A33D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6ADFD9A-62EF-417C-8D61-014CFB3A33D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6ADFD9A-62EF-417C-8D61-014CFB3A33D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6ADFD9A-62EF-417C-8D61-014CFB3A33D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5ACAF551-EA10-4950-96C7-BB4749326B8E}
+	EndGlobalSection
+EndGlobal
