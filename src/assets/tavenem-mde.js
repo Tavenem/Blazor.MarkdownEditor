@@ -61,11 +61,6 @@ export function initializeEditor(dotNetObjectRef, elementId, value, options, cus
             }
         };
 
-        if (options.theme == 2
-            || (options.theme == 0 && preferredScheme == 2)) {
-            editorOptions.theme = 'dark';
-        }
-
         if (customButtons && customButtons.length) {
             let buttons = [];
             for (let i = 0; i < customButtons.length; i++) {
@@ -116,7 +111,7 @@ export function initializeEditor(dotNetObjectRef, elementId, value, options, cus
     return preferredScheme;
 }
 
-export function initializeViewer(dotNetObjectRef, elementId, value, theme) {
+export function initializeViewer(dotNetObjectRef, elementId, value) {
     const element = document.getElementById(elementId);
     if (element) {
         const viewer = Editor.factory({
@@ -158,8 +153,8 @@ export function setEditorPreviewStyle(elementId, value) {
 export function setEditorTheme(elementId, value) {
     if (window.tavenem.blazor.markdownEditor._editorInstances) {
         const editor = window.tavenem.blazor.markdownEditor._editorInstances[elementId];
-        if (editor && editor.editor) {
-            editor.editor.theme = value;
+        if (editor) {
+            editor.theme = value;
         }
     }
 }
@@ -186,7 +181,7 @@ function setColorScheme(theme) {
     if (window.tavenem.blazor.markdownEditor._editorInstances) {
         for (const elementId in window.tavenem.blazor.markdownEditor._editorInstances) {
             const editor = window.tavenem.blazor.markdownEditor._editorInstances[elementId];
-            if (editor && editor.dotNetObjectRef && editor.editor && !editor.editor.isViewer() && editor.editor.theme === 0) {
+            if (editor && editor.dotNetObjectRef && editor.editor && !editor.editor.isViewer() && editor.theme === 0) {
                 editor.dotNetObjectRef.invokeMethodAsync("UpdateComponentTheme", theme);
             }
         }

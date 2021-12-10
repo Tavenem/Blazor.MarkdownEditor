@@ -33,6 +33,9 @@
     <Content Update="assets\package-lock.json" Pack="false" />
     <Content Update="assets\postcss.config.js" Pack="false" />
     <Content Update="assets\rollup.config.js" Pack="false" />
+    <Content Include="assets\styles.css" />
+    <Content Include="assets\tavenem-mde.js" />
+    <None Remove="assets\styles.css" />
   </ItemGroup>
 
   <ItemGroup>
@@ -40,7 +43,10 @@
   	  <PrivateAssets>all</PrivateAssets>
   	  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.AspNetCore.ClientAssets" Version="0.1.0-alpha.21528.2" />
+    <PackageReference Include="Microsoft.AspNetCore.ClientAssets" Version="0.1.0-alpha.21528.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.0" />
   </ItemGroup>
 
@@ -49,22 +55,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="assets\styles.css" />
-    <Content Include="assets\tavenem-mde.js" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="assets\styles.css" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ClientAssetsInputs Remove="assets\postcss.config.js" />
     <ClientAssetsInputs Remove="assets\rollup.config.js" />
-    <CssFiles Remove="assets\styles.css" />
     <ClientAssetsInputs Remove="assets\tavenem-mde.js" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <CssFiles Remove="assets\styles.css" />
     <CssFiles Include="assets\**\*.css"></CssFiles>
   </ItemGroup>
 

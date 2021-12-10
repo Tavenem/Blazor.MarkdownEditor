@@ -190,16 +190,16 @@ public partial class MarkdownEditor : IAsyncDisposable
     /// </remarks>
     public override async Task SetParametersAsync(ParameterView parameters)
     {
-        string? newValue = null;
+        string? newValue;
         var pendingValue = false;
 
-        MarkdownEditorTheme newTheme = default;
+        MarkdownEditorTheme newTheme;
         var pendingTheme = false;
 
-        EditMode newMode = default;
+        EditMode newMode;
         var pendingMode = false;
 
-        MarkdownPreviewStyle newStyle = default;
+        MarkdownPreviewStyle newStyle;
         var pendingStyle = false;
 
         if (_initialized)
@@ -225,6 +225,32 @@ public partial class MarkdownEditor : IAsyncDisposable
                 && newStyle != PreviewStyle)
             {
                 pendingStyle = true;
+            }
+        }
+        else
+        {
+            if (parameters.TryGetValue<string>(nameof(Value), out newValue)
+                && newValue != Value)
+            {
+                Value = newValue;
+            }
+
+            if (parameters.TryGetValue(nameof(Theme), out newTheme)
+                && newTheme != Theme)
+            {
+                Theme = newTheme;
+                CurrentTheme = newTheme;
+            }
+
+            if (parameters.TryGetValue(nameof(EditMode), out newMode))
+            {
+                EditMode = newMode;
+            }
+
+            if (parameters.TryGetValue(nameof(PreviewStyle), out newStyle)
+                && newStyle != PreviewStyle)
+            {
+                PreviewStyle = newStyle;
             }
         }
 

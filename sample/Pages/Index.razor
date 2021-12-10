@@ -23,9 +23,18 @@
                 Theme="MarkdownEditorTheme.Light" />
 
 <h1>Locked WYSIWYG</h1>
-<p>Dark mode</p>
+<button @onclick=@(_ => BoundTheme = (BoundTheme == MarkdownEditorTheme.Dark ? MarkdownEditorTheme.Light : MarkdownEditorTheme.Dark))>
+    @if (BoundTheme == MarkdownEditorTheme.Dark)
+    {
+        <span>Dark mode</span>
+    }
+    else
+    {
+        <span>Light mode</span>
+    }
+</button>
 
 <MarkdownEditor EditMode="EditMode.WYSIWYG"
                 LockEditMode="true"
                 Placeholder="Enter text here..."
-                Theme="MarkdownEditorTheme.Dark" />
+                Theme="BoundTheme" />

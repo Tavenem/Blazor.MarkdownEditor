@@ -2,6 +2,8 @@
 
 public partial class Index
 {
+    private MarkdownEditorTheme BoundTheme { get; set; } = MarkdownEditorTheme.Dark;
+
     private List<MarkdownEditorButton> CustomButtons { get; } = new()
     {
         new()
