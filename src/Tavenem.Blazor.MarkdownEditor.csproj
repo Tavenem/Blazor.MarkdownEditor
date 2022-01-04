@@ -12,7 +12,7 @@
     <Version>1.0.0</Version>
     <Authors>Wil Stead</Authors>
     <Description>Markdown editor Razor Component.</Description>
-    <Copyright>Copyright © 2021 Wil Stead</Copyright>
+    <Copyright>Copyright © 2021–2022 Wil Stead</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/Tavenem/Blazor.MarkdownEditor</PackageProjectUrl>
     <PackageIcon>tavenem_128.png</PackageIcon>
